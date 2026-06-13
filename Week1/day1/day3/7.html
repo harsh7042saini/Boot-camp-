@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+
+    <style>
+        p::before {
+            content: "❤️";
+        }
+
+        p::after {
+            content: "👍";
+        }
+
+        h3::first-letter {
+            color: red;
+            font-size: 30px;
+        }
+
+        h3::first-line {
+            color: rgb(34, 10, 245);
+        }
+
+        li::marker {
+            color: rgb(255, 0, 60);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <p>Welcome to pseudo element class</p>
+
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum illo quae inventore nesciunt harum modi delectus
+        voluptates esse vitae animi. Distinctio voluptatibus aut velit eligendi quisquam suscipit nisi eveniet
+        blanditiis.</h3>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+</html>

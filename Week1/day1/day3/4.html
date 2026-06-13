@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .main {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .row1,
+        .row2 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            width: 250px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 15px;
+            display: inline-block;
+            background-color: white;
+        }
+
+        .box img {
+            width: 100%;
+            height: 320px;
+        }
+
+        .box h2 {
+            margin-top: 10px;
+        }
+
+        .box p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        button {
+            background-color: aqua;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 600px) {
+            .box {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media screen and (max-width: 600px) and (min-width: 300px) {
+            .box {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <h1>Movie Booking System</h1>
+        <br>
+
+        <div class="row1">
+
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/Doctor-Strange--In-The-Multiverse-Of-Madness-r-705x750-36f0e140-b752-11ec-a762-319bdb0970f2.jpg"
+                    alt="Dr Strange">
+                <h2>Dr. Strange</h2>
+                <p>Rating: (4.5/5)</p>
+                <button type="button">Book Now</button>
+            </div>
+
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/bb2--705x750-cbc15240-8a94-11ec-8efd-6d205f33f529.jpg"
+                    alt="Bhool Bhulaiya 2">
+                <h2>Bhool Bhulaiya 2</h2>
+                <p>Rating: (4.0/5)</p>
+                <button type="button">Book Now</button>
+            </div>
+
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/Jayeshbhai-Jordaar---705x750-660c01c0-cf7c-11ec-98b3-41c37f260d1c.jpg"
+                    alt="Jayeshbhai Jordaar">
+                <h2>Jayeshbhai Jordaar</h2>
+                <p>Rating: (4.2/5)</p>
+                <button type="button">Book Now</button>
+            </div>
+
+        </div>
+
+        <div class="row2">
+
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/Jurassic-World--Dominion-705x750-b554ee90-cd51-11ec-8d22-2363945d80ef.jpg"
+                    alt="Jurassic World">
+                <h2>Jurassic World</h2>
+                <p>Rating: (4.3/5)</p>
+                <button type="button">Book Now</button>
+            </div>
+
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/KGF-705x750-76008750-b6fd-11ec-9639-8322852eadd4.jpg"
+                    alt="KGF 2">
+                <h2>KGF 2</h2>
+                <p>Rating: (4.6/5)</p>
+                <button type="button">Book Now</button>
+            </div>
+
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/RRR-North-705x750-fd78d9c0-693d-11ec-bbcd-5d122dc4018b.jpg"
+                    alt="RRR">
+                <h2>RRR</h2>
+                <p>Rating: (4.7/5)</p>
+                <button type="button">Book Now</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

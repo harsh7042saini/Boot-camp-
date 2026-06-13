@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            position: relative;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(68, 255, 0);
+            position: absolute;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            /* transform: scale(.5);
+            transform: rotate(70deg);
+            transform: skew(30deg); */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"> I Am Inner Box</div>
+    </div>
+</body>
+
+</html>

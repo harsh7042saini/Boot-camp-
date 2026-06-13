@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class </title>
+    <style>
+        buttton:hover{
+            background-color: red;
+        }
+
+        button:active{
+            background-color: green;
+        }
+
+        button:focus{
+            background-color: blue;
+            border: 2px solid black;
+        }
+
+        button:checked+label {
+            background-color: yellow;
+        }
+        button:disabled{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <button> submit</button>
+    <input> type="text">
+    <input type="checkbox" name="" id="1p">
+    <label for="">change color to green</label>
+    <input type="text" name="" id=""disabled>
+    
+</body>
+</html>

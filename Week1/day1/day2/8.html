@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators</title>
+
+    <style>
+        div p {
+            color: red;
+        }
+
+        div>p {
+            color: green;
+        }
+
+        div+div {
+            background-color: yellow;
+        }
+
+        div~div {
+            background-color: cyan;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <Div>
+        <h1>1</h1>
+        <p>2</p>
+        <div>
+            <span>3</span>
+            <p>4</p>
+        </div>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+    </Div>
+    <Div>
+        <h1>8</h1>
+        <p>9</p>
+        <div>
+            <span>10</span>
+            <p>11</p>
+        </div>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+    </Div>
+</body>
+
+</html>

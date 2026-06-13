@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            width: 350px;
+            background: #eeeeee;
+            padding: 25px;
+
+
+        }
+
+        .display {
+            height: 70px;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: inset 2px 2px 5px black(0, 0, 0.1);
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .btn {
+            height: 70px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 5px 5px 10px black(0, 0, 0.1), -5px -5px 10px white;
+        }
+
+        .operator {
+            background: black;
+            color: white;
+        }
+
+        .clear {
+            background: red;
+            color: white;
+        }
+
+        .equal {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <div class="display"></div>
+
+        <div class="buttons">
+
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn operator">+</button>
+
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn operator">-</button>
+
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn operator">*</button>
+
+            <button class="btn clear">C</button>
+
+            
+            <button class="btn">0</button>
+            <button class="btn equal">=</button>
+            <button class="btn operator">/</button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
