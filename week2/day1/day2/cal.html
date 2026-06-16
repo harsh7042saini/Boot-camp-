@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Image</title>
+    <style>
+        body {
+            background-color: rgb(232, 217, 217);
+        }
+
+        * {
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(22, 111, 111);
+        }
+
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* grid-template-rows: repeat(4, 1fr); */
+            height: 350px;
+            gap: 10px;
+            padding: 10px;
+            /* border: 1px solid black; */
+            border-radius: 10px;
+        }
+
+        .keyboard>div {
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 30px;
+            box-shadow: 2px 2px 5px gray;
+        }
+
+        .keyboard>div:hover {
+            background-color: pink;
+            cursor: pointer;
+        }
+
+        .calc {
+            border: 1px solid white;
+            width: 500px;
+            height: 450px;
+            margin: auto;
+            padding: 10px;
+            background-color: rgb(228, 225, 225);
+            border-radius: 10px;
+        }
+
+        .screen {
+            width: 450px;
+            height: 50px;
+            border: 1px solid black;
+            margin: auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .blk {
+            background-color: black;
+            color: white;
+        }
+
+        .btn {
+            background-color: white;
+        }
+
+        .clear {
+            background-color: red;
+            color: white;
+        }
+
+        .clear:hover {
+            background-color: rgb(156, 69, 69);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="calc">
+        <div class="screen"></div>
+        <div class="keyboard">
+            <div class="btn">1</div>
+            <div class="btn">2</div>
+            <div class="btn">3</div>
+            <div class="blk">+</div>
+            <div class="btn">4</div>
+            <div class="btn">5</div>
+            <div class="btn">6</div>
+            <div class="blk">-</div>
+            <div class="btn">7</div>
+            <div class="btn">8</div>
+            <div class="btn">9</div>
+            <div class="blk">*</div>
+            <div class="clear">C</div>
+            <div class="btn">0</div>
+            <div class="blk">=</div>
+            <div class="blk">/</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let bag = ""
+
+    // step-1 select/catch the element.
+    const keys = document.querySelectorAll(".keyboard > div");
+
+    // step-2 attach event.
+    for (let i = 0; i < keys.length; i++) {
+        keys[i].addEventListener("click", myCal);
+    }
+
+    // step-3 handle event.
+    function myCal(e) {
+        let targetNumber = e.target.innerText
+
+        const display = document.querySelector(".screen");
+
+        if (targetNumber == "C") {
+            bag = "";
+            display.innerText = bag;
+        } else if (targetNumber == "=") {
+            let ans = eval(bag)
+            display.innerText = ans;
+        } else {
+            bag += targetNumber;
+            display.innerText = bag;
+        }
+    }
+</script>

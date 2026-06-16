@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener Method</title>
+</head>
+
+<body>
+    <button onclick="sayhii()">hii</button>
+
+    <button id="cm">Click Me..</button>
+
+</body>
+
+</html>
+
+<script>
+    function sayhii() {
+        alert("hii")
+    }
+
+    const el = document.querySelector("#cm")
+    console.log(el);
+
+    el.addEventListener("click", getclick)
+
+    // /Event/ function handler
+    function getclick() {
+        alert("hello from addEvent Lister")
+    }
+</script>

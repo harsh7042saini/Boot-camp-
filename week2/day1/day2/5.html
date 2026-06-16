@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    //1. save data
+    localStorage.setItem("name", "Mohit")
+    localStorage.setItem("id", 23)
+
+    localStorage.setItem("hobby", JSON.stringify([1, 2, 3]))
+
+    //2. get Read
+
+    let nm = localStorage.getItem("name");
+    console.log(nm[1]), typeof nm;
+
+    //3. remove/ delete key value pair
+    localStorage.removeItem("name")
+
+    //4. clear
+    localStorage.clear()
+
+
+</script>
