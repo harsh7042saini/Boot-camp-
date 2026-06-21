@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise Selectors</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h3,
+        h5,
+        div,
+        p {
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .btn-panel {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #eee;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+
+    <hr />
+
+    <div class="btn-panel">
+        <button onClick="changeH1()">Change H1</button>
+        <button onClick="changeH3()">Change H3</button>
+        <button onClick="changeH5()">Change H5</button>
+        <button onClick="changeGreen()">Change Green</button>
+        <button onClick="changeRed()">Change Red</button>
+        <button onClick="changeBlue()">Change Blue</button>
+    </div>
+
+    <script>
+        function changeH1() {
+            document.querySelector("h1").style.color = "red";
+        }
+        function changeH3() {
+            document.querySelectorAll("h3").forEach(el => el.style.color = "green");
+        }
+        function changeH5() {
+            document.querySelectorAll("h5").forEach(el => el.style.color = "blue");
+        }
+        function changeGreen() {
+            document.querySelectorAll(".green").forEach(el => el.style.color = "green");
+        }
+        function changeRed() {
+            document.querySelectorAll(".red").forEach(el => el.style.color = "red");
+        }
+        function changeBlue() {
+            document.querySelectorAll(".blue").forEach(el => el.style.color = "blue");
+        }
+    </script>
+</body>
+
+</html>

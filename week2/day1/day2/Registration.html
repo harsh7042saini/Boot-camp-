@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .btn-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        button.reset {
+            background-color: #e74c3c;
+        }
+
+        button.reset:hover {
+            background-color: #c0392b;
+        }
+
+        .display-panel {
+            margin-top: 25px;
+            background: #fdfdfd;
+            border-left: 5px solid #2ecc71;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .display-panel h1,
+        .display-panel h2,
+        .display-panel h3,
+        .display-panel h4 {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .display-panel span {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <div class="form-group">
+            <input type="text" name="name" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <select id="gender">
+                <option value="">-- Select Gender --</option>
+                <option value="male">M</option>
+                <option value="female">F</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="text" name="email" id="email" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+            <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile">
+        </div>
+
+        <div class="btn-grid">
+            <button onclick="showName()">SHOW NAME</button>
+            <button onclick="showGender()">SHOW GENDER</button>
+            <button onclick="showEmail()">SHOW EMAIL</button>
+            <button onclick="showMobile()">SHOW MOBILE</button>
+            <button class="reset" onclick="resetForm()">RESET FORM</button>
+            <button class="reset" onclick="resetDisplay()">RESET DISPLAY</button>
+        </div>
+
+        <hr>
+
+        <div class="display-panel">
+            <h1 id="dName">NAME: <span></span></h1>
+            <h2 id="dGender">GENDER: <span></span></h2>
+            <h3 id="dEmail">EMAIL: <span></span></h3>
+            <h4 id="dMobile">MOBILE: <span></span></h4>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function showName() {
+            const nameVal = document.getElementById("name").value;
+            document.querySelector("#dName span").innerText = nameVal || "N/A";
+        }
+
+        function showGender() {
+            const genderVal = document.getElementById("gender").value;
+            document.querySelector("#dGender span").innerText = genderVal ? genderVal.toUpperCase() : "N/A";
+        }
+
+        function showEmail() {
+            const emailVal = document.getElementById("email").value;
+            document.querySelector("#dEmail span").innerText = emailVal || "N/A";
+        }
+
+        function showMobile() {
+            const mobileVal = document.getElementById("mobile").value;
+            document.querySelector("#dMobile span").innerText = mobileVal || "N/A";
+        }
+
+        function resetForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("gender").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("mobile").value = "";
+        }
+
+        function resetDisplay() {
+            document.querySelector("#dName span").innerText = "";
+            document.querySelector("#dGender span").innerText = "";
+            document.querySelector("#dEmail span").innerText = "";
+            document.querySelector("#dMobile span").innerText = "";
+        }
+    </script>
+</body>
+
+</html>

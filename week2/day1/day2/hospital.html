@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital App</title>
+
+    <link rel="stylesheet" href="hospital.css">
+
+</head>
+
+<body>
+
+    <h1>🏥 Hospital - Doctor Records</h1>
+
+    <div class="app-container">
+
+        <form id="doctorForm">
+
+            <label for="name">Doctor Name</label>
+            <input id="name" type="text" placeholder="Enter doctor name" required>
+
+            <label for="docID">Doctor ID</label>
+            <input id="docID" type="number" placeholder="Enter doctor ID" required>
+
+            <label for="dept">Specialization</label>
+
+            <select id="dept" placeholder="Select specialization" required>
+
+                <option>Dermatologist</option>
+                <option>ENT</option>
+                <option>Dentist</option>
+                <option>COVID</option>
+                <option>Gynecologist</option>
+
+            </select>
+
+            <label for="exp">Experience</label>
+            <input id="exp" type="number" placeholder="Enter experience" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="text" placeholder="Enter email" required>
+
+            <label for="mbl">Mobile Number</label>
+            <input id="mbl" type="number" placeholder="Enter mobile number" required>
+
+            <input type="submit" value="Register Doctor">
+
+        </form>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Specialization</th>
+                        <th>Experience</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Role</th>
+                        <th>Delete</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="hospital.js"></script>
+
+</body>
+
+</html>

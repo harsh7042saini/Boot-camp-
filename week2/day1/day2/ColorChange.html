@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background: #222;
+            color: #fff;
+            padding-top: 10vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            transition: color 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-red {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .btn-yellow {
+            background-color: #f1c40f;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Coding Student</h1>
+    <button class="btn-red" onClick="changeRed()">Change Text color to red</button>
+    <button class="btn-yellow" onClick="changeYellow()">Change Text color to yellow</button>
+
+    <script>
+        const title = document.querySelector("h1");
+        function changeRed() { title.style.color = "red"; }
+        function changeYellow() { title.style.color = "yellow"; }
+    </script>
+</body>
+
+</html>

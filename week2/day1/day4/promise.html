@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    // 1. Take count value
+    var count = 5;
+
+    // 2. Create new Promise
+    var promise = new Promise((resolve, reject) => {
+
+        if (count > 0) {
+            resolve("Positive count");
+        } else {
+            reject("Negative count");
+        }
+
+    });
+
+    console.log(promise);
+
+    // 3. Read values from Promise
+    promise
+        .then((res) => {
+            console.log(res);
+        })
+
+        .catch((rej) => {
+            console.log(rej);
+        });
+
+</script>
